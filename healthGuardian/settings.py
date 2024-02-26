@@ -28,13 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-## 
-LANGUAGE_CODE = 'fr-fr'
-TIME_ZONE = 'Europe/Paris'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-DATE_INPUT_FORMATS = ('%d/%m/%Y','%Y-%m-%d')
 
 # Application definition
 
@@ -48,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'lesTaches',
+    "signUp",
+#    "DoctorSignUp",
+#    "DoctorSignIn"
 ]
 
 
@@ -123,6 +118,21 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+USE_L10N = True
+
+DATE_INPUT_FORMATS = ('%d/%m/%Y','%Y-%m-%d')
+
+"""
+## 
+LANGUAGE_CODE = 'fr-fr'
+TIME_ZONE = 'Europe/Paris'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+DATE_INPUT_FORMATS = ('%d/%m/%Y','%Y-%m-%d')
+
+"""
 
 
 # Static files (CSS, JavaScript, Images)
