@@ -11,6 +11,7 @@ from django.forms.widgets import ( RadioSelect, CheckboxSelectMultiple,
 from django.db import models 
 
 
+
 class Contact(models.Model):
     name = models.CharField(max_length=200)
     firstname = models.CharField(max_length=200)
