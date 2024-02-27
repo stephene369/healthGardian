@@ -21,12 +21,14 @@ from . import views
 
 urlpatterns = [
     path("admin", admin.site.urls ) , 
-    path("", views.home , name='home' ) , 
+    #path("", views.home , name='home' ) , 
     
-    path("<name>", views.Home , name='home' ) , 
-    path("home/<name>", views.Home , name='home' ) , 
+    #path("<name>", views.Home , name='home' ) , 
+    #path("home/<name>", views.Home , name='home' ) , 
     
-    path("contacts/" , include('signUp.urls') )
+    #path("contacts/" , include('signUp.urls'), name='c' ) , 
+    
+    path("" , include("welcome.urls") )
 ]
 
 

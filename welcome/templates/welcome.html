@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HealthGardian</title>
+  <!--
+  <link rel="stylesheet" href="{% static 'styles.css' %}"> 
+  --> 
+  <link rel="stylesheet" href="static/css/style.css">  
+  <script src="static/js/ecg-webcomponent.js"></script>
+  <link rel="stylesheet" href="static/css/styles.css">
+
+</head>
+<body>
+
+    <body>
+        {% include 'lockedHeader.html' %}
+
+
+        <div class = "ecg-line">
+            <script>
+                (function() {
+                  document.body.innerHTML += '<ecg-line></ecg-line>';
+                  ecgLine((bang) => setInterval(() => bang(), 1000));
+                })();
+              </script>
+        </div>
+
+
+    </body>
+
+</html>

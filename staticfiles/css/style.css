@@ -1,0 +1,49 @@
+header {
+    background-color: #bbc3b945;
+    color: #000000;
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #196c00;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.search-bar {
+    size: 10px;
+    padding: 5px 10px;
+}
+
+.no-space{
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #196c00;
+}
+
+.vertical-align p {
+    display: block;
+    padding: 0px;
+    line-height: 5px; /* Utilise la même hauteur de police que .logo */
+}

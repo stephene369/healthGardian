@@ -56,4 +56,3 @@ class CommentForm(forms.Form):
     comment = forms.CharField(
                 widget=forms.TextInput(attrs={'size':'40'}))
     
-    
