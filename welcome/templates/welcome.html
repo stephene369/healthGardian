@@ -12,21 +12,86 @@
   
   -->
   {% include 'LockedHeader.html' %}
-
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
 </head>
+
 
 <body>
 
 
-  <div>
+  <main class="container">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="col-lg-6 px-0">
+            <h1 class="display-4 fst-italic">The Importance of Monitoring Your Health: A Practical Guide for Better Well-being Management </h1>
+            <p class="lead my-3">
+
+              Regular monitoring of our health status is an essential practice to ensure our long-term well-being. As a doctor, I often witness the harmful consequences that can result from inadequate health monitoring. That's why I want to share with you some practical tips to help you maintain effective surveillance of your health status.
+
+              First and foremost, it's crucial to understand that health monitoring goes beyond doctor visits. While these consultations are important, it's just as essential to actively monitor certain aspects of our health on a daily basis. This can include monitoring our diet, physical activity, sleep, as well as any unusual symptoms we may experience.
+              
+              Next, I highly recommend keeping a personal health journal. This can be in the form of a paper journal or a mobile application, depending on your preferences. Regularly jot down your meals, level of physical activity, sleep quality, and any other relevant symptoms or observations. This will help you better understand the habits that affect your health and more easily detect any significant changes.
+              
+              Furthermore, don't hesitate to make use of available health monitoring technologies. Wearable devices such as smartwatches and health tracking apps can provide valuable insights into your heart rate, physical activity, sleep, and much more. By integrating these tools into your daily routine, you can gain a more comprehensive overview of your health and quickly spot any signs of trouble.
+              
+              Lastly, remember that health monitoring is not just about detecting existing problems but also plays a crucial role in disease prevention. By identifying and addressing potential risk factors as soon as they arise, you can often prevent the development of serious health issues in the future.
+              
+              In conclusion, regular monitoring of our health status is a fundamental pillar of a healthy and balanced lifestyle. By taking a proactive approach to managing your health, you can not only improve your overall well-being but also prevent many potential diseases. Don't wait for health problems to arise; take the necessary steps now to stay fit and healthy.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div
+                class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary-emphasis">5 Simple Tips for a Healthier Lifestyle</strong>
+                    <h3 class="mb-0">Dr. Emily Johnson</h3>
+                    <div class="mb-1 text-body-secondary">
+                      Date: March 3, 2024</div>
+                    <p class="card-text mb-auto">
+                      In today's fast-paced world, maintaining a healthy lifestyle can sometimes feel like a challenge. However, it doesn't have to be complicated. Here are five simple tips to help you live a healthier life:
+
+                      Stay hydrated: Drink plenty of water throughout the day to keep your body hydrated and your energy levels up.
+                      
+                      Eat more fruits and vegetables: Aim to fill half your plate with fruits and vegetables at every meal for a nutrient-packed diet.
+                      
+                      Move your body: Incorporate regular physical activity into your day, whether it's a brisk walk, yoga session, or dance class.
+                      
+                      Prioritize sleep: Aim for 7-9 hours of quality sleep each night to support overall health and well-being.
+                      
+                      Practice mindfulness: Take time each day to relax and unwind, whether through meditation, deep breathing exercises, or simply enjoying a quiet moment.
+                      
+                      By incorporating these simple tips into your daily routine, you can take meaningful steps towards a healthier, happier life.
+
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
     <script>
-      (function () {
+      (function() {
         document.body.innerHTML += '<ecg-line></ecg-line>';
         ecgLine((bang) => setInterval(() => bang(), 5000));
       })();
     </script>
+    <script src="static/js/Ecg-webcomponent.js"></script>
   </div>
-  <script src="static/js/Ecg-webcomponent.js"></script>
+
+
+
+{% include 'footer.html' %}
 
 
 

@@ -29,7 +29,9 @@ urlpatterns = [
     #path("contacts/" , include('signUp.urls'), name='c' ) , 
     
     path("" , include("welcome.urls") ), 
-    path("", include("signUp.urls"))
+    path("", include("signUp.urls")),
+    path("", include("logIn.urls")), 
+    path("" , include("home.urls"))
 ]
 
 

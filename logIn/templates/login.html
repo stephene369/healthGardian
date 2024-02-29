@@ -18,14 +18,15 @@
             }
         </script>
         <form>
+            
             <img class="" src="{{ image_url }}" alt="" width="72" height="72">
 
             <h1 class="h3 mb-3 fw-normal">Signup </h1>
             <br>
             <h4>
-                <a href="{% url 'signupUsers' %}">User</a>
+                <a href="{% url 'logInUsers' %}">User</a>
                 <div class="me-2"></div> <!-- Espace horizontal -->
-                <a href="{% url 'signupDoctor' %}">Doctor</a>
+                <a href="{% url 'logInDoctors' %}">Doctor</a>
             </h4>
 
 
@@ -33,14 +34,6 @@
             {{ form.as_p }}
             <input type="checkbox" onclick="myFunction()">Show Password
 
-
-            {% if messages %}
-            <ul class="messages">
-                {% for message in messages %}
-                <li style="color: red;">{{ message }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %}
 
             <button class="btn btn-primary w-100 py-2" type="submit">Sign Up</button>
 

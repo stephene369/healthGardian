@@ -4,11 +4,11 @@ var ecg;
     var WIDTH = window.innerWidth ;
 
     //var WIDTH = 275;
-    var INTERVAL = 50;
+    var INTERVAL = 80;
     var CURVE_COLOR = "#22ff22";
     var heartData = [0, 0, 0, 0, 0];
-    var heartDataIndex = 10;
-    var beatDataIndex = -10;
+    var heartDataIndex = 1;
+    var beatDataIndex = -1;
     var BANG = false;
     function fillHeartData(length) {
         if (length !== heartData.length) {
@@ -35,7 +35,7 @@ var ecg;
         }
     }
     function fillRandomData() {
-        heartData[heartDataIndex] = Math.random() * 0.05 - 0.025;
+        heartData[heartDataIndex] = Math.random() - 0.55;
     }
     function updateData() {
         heartDataIndex++;
@@ -58,7 +58,7 @@ var ecg;
         ctx.beginPath();
         ctx.translate(x, y);
         ctx.scale(a / b, 1);
-        ctx.arc(0, 0, b, 0, Math.PI * 2, true);
+        ctx.arc(0, 0, b, 0, Math.PI * 2, false);
         ctx.restore();
         ctx.closePath();
     }

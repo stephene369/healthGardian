@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include 'HomeHeader.html' %}
+</head>
+
+
+<body>
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+            <div class="col-lg-6 px-0">
+                <button type="button" class="btn btn-primary" >
+                    <h1 class="display-12 fst-italic">Update</h1>
+                </button>
+                <p class="lead my-3">
+                    Why Updating Your Information Matters
+
+                    Keeping your information up-to-date on our platform is crucial 
+                    for ensuring the accuracy of the services we provide. By regularly 
+                    updating details such as your weight, height, age, gender, and 
+                    temperature, you enable us to tailor our recommendations and 
+                    analyses specifically to you.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis">
+                            <button type="button" class="btn btn-primary" >
+                                Cnsultaion
+                            </button>
+                        </strong>
+         
+                        <p class="mb-auto">
+                            Regular consultation with healthcare professionals is essential for maintaining your overall health and well-being.
+                        
+                        </p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+    </main>
+
+
+    {% include 'footer.html' %}
+</body>
+
+</html>

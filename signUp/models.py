@@ -1,12 +1,7 @@
-from django.contrib import admin
-from django.shortcuts import render
 from django import forms
-from django.forms import models
-from datetime import datetime
 
 
 class User(forms.Form):
-
     first_name = forms.CharField(
         label="First Name",
         max_length=100,
@@ -37,18 +32,39 @@ class User(forms.Form):
         ),
     )
 
+
     password = forms.CharField(
         label="Password",
         widget=forms.PasswordInput(
-            attrs={"class": "form-control", "placeholder": "Password"}
+            attrs={"class": "form-control", 
+                   "placeholder": "+6caracters1Numvers1Upper", 
+                   "id": "password", 
+                   'type':"password",
+                    'pattern':"^(?=.*[0-9])(?=.*[A-Z]).{6,}$"  }
         ),
     )
-    confirm_password = forms.CharField(
+
+
+"""    confirm_password = forms.CharField(
         label="Confirm Password",
         widget=forms.PasswordInput(
-            attrs={"class": "form-control", "placeholder": "Confirm Password"}
+            attrs={
+                "class": "form-control",
+                "placeholder": "Confirm Password",
+                "id": "confirm_password",
+            }
         ),
     )
+"""
+
+
+
+
+
+
+
+
+
 
 
 
@@ -87,15 +103,14 @@ class Doctor(forms.Form):
     password = forms.CharField(
         label="Password",
         widget=forms.PasswordInput(
-            attrs={"class": "form-control", "placeholder": "Password"}
+            attrs={"class": "form-control", 
+                   "placeholder": "+6caracters1Numvers1Upper", 
+                   "id": "password", 
+                   'type':"password",
+                    'pattern':"^(?=.*[0-9])(?=.*[A-Z]).{6,}$"  }
         ),
     )
-    confirm_password = forms.CharField(
-        label="Confirm Password",
-        widget=forms.PasswordInput(
-            attrs={"class": "form-control", "placeholder": "Confirm Password"}
-        ),
-    )
+    
     specialization = forms.CharField(
         label="Specialization",
         max_length=100,
@@ -103,8 +118,6 @@ class Doctor(forms.Form):
             attrs={"class": "form-control", "placeholder": "Specialization"}
         ),
     )
-
-
 
 
 """

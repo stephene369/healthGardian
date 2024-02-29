@@ -50,12 +50,6 @@
       fill: currentColor;
     }
 
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 2.75rem;
-      overflow-y: hidden;
-    }
 
     .nav-scroller .nav {
       display: flex;
@@ -92,8 +86,77 @@
     .bd-mode-toggle .dropdown-menu .active .bi {
       display: block !important;
     }
-  </style>
 
+
+
+.navbar {
+  background-color: #ffffff; /* Background color */
+}
+
+.navbar a {
+  float: left; /* Float the links to the left */
+  display: block; /* Make the links block-level elements */
+  color: rgb(0, 0, 0); /* Text color */
+  text-align: center; /* Center-align the text */
+  padding: 14px 16px; /* Add padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.navbar a:hover {
+  background-color: #4169eb1b; /* Background color on hover */
+  color: rgb(0, 0, 0); /* Text color on hover */
+}
+
+
+
+.dropdown .dropbtn {
+  font-size: 16px; /* Font size */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  color: rgb(0, 0, 0); /* Text color */
+  padding: 14px 16px; /* Add padding */
+  background-color: inherit; /* Inherit background color */
+  font-family: inherit; /* Inherit font family */
+  margin: 0; /* Remove margin */
+}
+
+.dropdown-content {
+  display: none; /* Hide the dropdown content by default */
+  position: absolute; /* Position absolute */
+  background-color: #f9f9f9; /* Background color */
+  min-width: 160px; /* Minimum width */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.539); /* Box shadow */
+  z-index: 1; /* Set z-index */
+}
+
+.dropdown-content a {
+  float: none; /* Do not float the links */
+  color: black; /* Text color */
+  padding: 12px 16px; /* Add padding */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make the links block-level elements */
+  text-align: left; /* Left-align text */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd; /* Background color on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show the dropdown content on hover */
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #ffffff;}
+
+  </style>
 
   <!-- Custom styles for this template -->
   <link href="static/css/headers.css" rel="stylesheet">
@@ -113,18 +176,24 @@
         </a>
       </div>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2">Features</a></li>
-        <li><a href="#" class="nav-link px-2">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2">About</a></li>
-      </ul>
+      <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">Update</a>
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown</button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
 
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href='/logInUsers'" >Login</button>
-        <button type="button" class="btn btn-primary" onclick="window.location.href='/signUpUsers'">Sign-up</button>
+        <button type="button" class="btn btn-danger" onclick="window.location.href='/logout'">Logout</button>
       </div>
+  
+
     </header>
   </div>
 
