@@ -1,31 +1,117 @@
 from django.contrib import admin
 from django.shortcuts import render
-from django.forms import ModelForm , models
 from django import forms
-from django.forms.fields import (DateField, ChoiceField,
-                MultipleChoiceField, CharField, EmailField)
-from django.forms.widgets import ( RadioSelect, CheckboxSelectMultiple, 
-                SelectDateWidget)
+from django.forms import models
+from datetime import datetime
 
 
-from django.db import models 
+class User(forms.Form):
+
+    first_name = forms.CharField(
+        label="First Name",
+        max_length=100,
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "First Name"}
+        ),
+    )
+    last_name = forms.CharField(
+        label="Last Name",
+        max_length=100,
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "Last Name"}
+        ),
+    )
+    birth_date = forms.DateField(
+        label="Date of Birth",
+        widget=forms.DateInput(attrs={"class": "form-control", "type": "date"}),
+    )
+    telephone = forms.CharField(
+        label="Telephone",
+        max_length=100,
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": "+229 00 00 00 00",
+                "pattern": "\+229 [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}",
+            }
+        ),
+    )
+
+    password = forms.CharField(
+        label="Password",
+        widget=forms.PasswordInput(
+            attrs={"class": "form-control", "placeholder": "Password"}
+        ),
+    )
+    confirm_password = forms.CharField(
+        label="Confirm Password",
+        widget=forms.PasswordInput(
+            attrs={"class": "form-control", "placeholder": "Confirm Password"}
+        ),
+    )
 
 
 
-class Contact(models.Model):
-    name = models.CharField(max_length=200)
-    firstname = models.CharField(max_length=200)
-    email = models.EmailField(max_length=200)
-    message = models.CharField(max_length=1000)
+
+class Doctor(forms.Form):
+    first_name = forms.CharField(
+        label="First Name",
+        max_length=100,
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "First Name"}
+        ),
+    )
+    last_name = forms.CharField(
+        label="Last Name",
+        max_length=100,
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "Last Name"}
+        ),
+    )
+    birth_date = forms.DateField(
+        label="Date of Birth",
+        widget=forms.DateInput(attrs={"class": "form-control", "type": "date"}),
+    )
+    telephone = forms.CharField(
+        label="Telephone",
+        max_length=100,
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": "+229 00 00 00 00",
+                "pattern": "\+229 [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}",
+            }
+        ),
+    )
+
+    password = forms.CharField(
+        label="Password",
+        widget=forms.PasswordInput(
+            attrs={"class": "form-control", "placeholder": "Password"}
+        ),
+    )
+    confirm_password = forms.CharField(
+        label="Confirm Password",
+        widget=forms.PasswordInput(
+            attrs={"class": "form-control", "placeholder": "Confirm Password"}
+        ),
+    )
+    specialization = forms.CharField(
+        label="Specialization",
+        max_length=100,
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "Specialization"}
+        ),
+    )
 
 
 
-BIRTH_YEAR_CHOICES = ('1999', '2000', '2001')
-GENDER_CHOICES = (('m', 'Male'), ('f', 'Female'))
-FAVORITE_COLORS_CHOICES = (('blue', 'Blue'),
-                        ('green', 'Green'),
-                        ('black', 'Black'))
 
+"""
+
+BIRTH_YEAR_CHOICES = ("1999", "2000", "2001")
+GENDER_CHOICES = (("m", "Male"), ("f", "Female"))
+FAVORITE_COLORS_CHOICES = (("blue", "Blue"), ("green", "Green"), ("black", "Black"))
 
 
 # Sans ModelForm
@@ -36,23 +122,21 @@ class ContactForm2(forms.Form):
     message = forms.CharField(max_length=1000)
 
 
-
 ####### Form with Date and Sex choice
 class SimpleForm(forms.Form):
     birth_year = DateField(widget=SelectDateWidget(years=BIRTH_YEAR_CHOICES))
 
-    #birth_year = DateField(widget=SelectDateWidget())
-    
+    # birth_year = DateField(widget=SelectDateWidget())
+
     gender = ChoiceField(widget=RadioSelect, choices=GENDER_CHOICES)
-    favorite_colors = forms.MultipleChoiceField(required=False,
-    widget=CheckboxSelectMultiple, choices=FAVORITE_COLORS_CHOICES)
+    favorite_colors = forms.MultipleChoiceField(
+        required=False, widget=CheckboxSelectMultiple, choices=FAVORITE_COLORS_CHOICES
+    )
 
 
 class CommentForm(forms.Form):
-    name = forms.CharField(
-                widget=forms.TextInput(attrs={'class':'special'}))
-    
-    url = forms.URLField(initial="Votre lien" , label="Lien" )
-    comment = forms.CharField(
-                widget=forms.TextInput(attrs={'size':'40'}))
-    
+    name = forms.CharField(widget=forms.TextInput(attrs={"class": "special"}))
+
+    url = forms.URLField(initial="Votre lien", label="Lien")
+    comment = forms.CharField(widget=forms.TextInput(attrs={"size": "40"}))
+"""

@@ -1,18 +1,14 @@
 var ecg;
 (function (ecg) {
-    var HEIGHT = 825;
-    var WIDTH = window.innerWidth;
+    var HEIGHT = 800;
+    var WIDTH = window.innerWidth ;
 
-    function updateWidth() {
-        WIDTH = window.innerWidth;
-    }
-    window.addEventListener('resize', updateWidth);
-
-    var INTERVAL = 30;
+    //var WIDTH = 275;
+    var INTERVAL = 50;
     var CURVE_COLOR = "#22ff22";
     var heartData = [0, 0, 0, 0, 0];
-    var heartDataIndex = 0;
-    var beatDataIndex = -1;
+    var heartDataIndex = 10;
+    var beatDataIndex = -10;
     var BANG = false;
     function fillHeartData(length) {
         if (length !== heartData.length) {

@@ -1,0 +1,1 @@
+{'first_name': 'Stephene', 'last_name': 'WANTCHEKON', 'birth_date': datetime.date(2024, 2, 1), 'telephone': '+229 60 87 77 28', 'password': 'stephene', 'confirm_password': 'stephene'}

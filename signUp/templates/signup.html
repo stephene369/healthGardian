@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    {% include 'head.html' %}
+
+    <main class="form-signin w-100 m-auto">
+        <form>
+            <img class="" src="{{ image_url }}" alt="" width="72" height="72">
+
+                <h1 class="h3 mb-3 fw-normal">Signup  </h1>
+                <br>
+                <h4>
+                    <a href="{% url 'signupUsers' %}">User</a>
+                    <div class="me-2"></div> <!-- Espace horizontal -->
+                    <a href="{% url 'signupDoctor' %}">Doctor</a>
+                </h4>
+            
+
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button class="btn btn-primary w-100 py-2" type="submit">Sign Up</button>
+
+            <p class="mt-5 mb-3 text-body-secondary"> &copy; {{ date }} </p>
+
+            
+        </form>
+
+        <!-- <div class="form-check text-start my-3">
+                <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Remember me
+                </label>
+            </div> -->
+
+
+
+    </main>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
